@@ -1,0 +1,13 @@
+version: '2'
+services:
+  kibana:
+    scale: ${scale}
+    start_on_create: true
+    health_check:
+      port: 5601
+      interval: 30000
+      unhealthy_threshold: 3
+      healthy_threshold: 3
+      response_timeout: 5000
+      strategy: recreate
+      request_line: ''

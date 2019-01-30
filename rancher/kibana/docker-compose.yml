@@ -1,0 +1,22 @@
+version: '2'
+services:
+  kibana:
+    tty: true
+    image: harbor.hm.dm.ad/logmanagement/kibana:${kb_version}
+    environment:
+      KB_CONFIG_ELASTICSEARCH_URL: http://elasticsearch-client:9200
+      KB_CONFIG_ELASTICSEARCH_USERNAME: kibana
+      KB_CONFIG_ELASTICSEARCH_PASSWORD: ${kibana_password}
+      KB_CONFIG_DEFAULTAPPID: dashboard
+      KB_MONITORING_UIENABLED: ${monitoring_ui}
+      KB_CONFIG_ELASTICSEARCH_REQUESTTIMEOUT: 300000
+      KB_CONFIG_ENCRYPTIONKEY: ${encryption_key}
+    external_links:
+       - ${client_stack}:elasticsearch-client
+    mem_limit: ${container_memory}
+    cpu_shares: ${cpu_shares}
+    labels:
+      io.rancher.scheduler.affinity:container_label_ne: io.rancher.stack_service.name=$$$${stack_name}/$$$${service_name}
+      io.rancher.scheduler.affinity:host_label: ${label_global_scheduling}
+      io.rancher.container.hostname_override: container_name
+      io.rancher.container.pull_image: always

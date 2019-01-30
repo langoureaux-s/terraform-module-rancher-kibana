@@ -8,16 +8,16 @@ terragrunt = {
     source = "git::https://github.com/langoureaux-s/terraform-module-rancher-kibana.git"
   }
   
-  project_name = "test"
-  stack_name = "kibana"
-  finish_upgrade = "true"
+  project_name            = "test"
+  stack_name              = "kibana"
+  finish_upgrade          = "true"
   label_global_scheduling = "kibana=true"
-  kibana_password = "y1546n02h482I1u2"
-  encryption_key = "y1546n02h482I1u10"
-  monitoring_ui = "false"
-  scale = "2"
-  client_stack = "elasticsearch/elasticsearch"
-  container_memory = "1g"
+  kibana_password         = "y1546n02h482I1u2"
+  encryption_key          = "y1546n02h482I1u10"
+  monitoring_ui           = "false"
+  scale                   = "2"
+  client_stack            = "elasticsearch/elasticsearch"
+  container_memory        = "1g"
 }
 ```
 

@@ -22,7 +22,8 @@ data "template_file" "docker_compose_kibana" {
   vars {
     kibana_password         = "${var.kibana_password}"
     monitoring_ui           = "${var.monitoring_ui}"
-    label_global_scheduling = "${var.label_global_scheduling}"
+    label_scheduling        = "${var.label_scheduling}"
+    global_scheduling       = "${var.global_scheduling}"
     kb_version              = "${var.image_version}"
     container_memory        = "${var.container_memory}"
     cpu_shares              = "${var.cpu_shares}"

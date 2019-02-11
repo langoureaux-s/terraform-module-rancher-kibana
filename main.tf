@@ -36,7 +36,7 @@ data "template_file" "rancher_compose_kibana" {
   template = "${file("${path.module}/rancher/kibana/rancher-compose.yml")}"
 
   vars {
-    scale = "${var.scale}"
+    scale = "${var.scale != "" ? "scale: var.scale" : ""}"
   }
 }
 resource "rancher_stack" "this" {

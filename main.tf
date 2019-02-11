@@ -29,6 +29,7 @@ data "template_file" "docker_compose_kibana" {
     cpu_shares              = "${var.cpu_shares}"
     encryption_key          = "${var.encryption_key}"
     client_stack            = "${var.client_stack}"
+    commit_id               = "${var.commit_id}"
   }
 }
 data "template_file" "rancher_compose_kibana" {

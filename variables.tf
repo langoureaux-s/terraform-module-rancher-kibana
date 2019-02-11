@@ -7,6 +7,10 @@ variable "stack_name" {
 variable "finish_upgrade" {
   description = "Automatically finish upgrade on Rancher when apply new plan"
 }
+variable "commit_id" {
+  description = "The commit id that build image. It's usefull to force pull new image when use always the same tag"
+  default = ""
+}
 
 
 variable "image_version" {

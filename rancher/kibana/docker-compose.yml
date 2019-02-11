@@ -11,6 +11,7 @@ services:
       KB_MONITORING_UIENABLED: ${monitoring_ui}
       KB_CONFIG_ELASTICSEARCH_REQUESTTIMEOUT: 300000
       KB_CONFIG_ENCRYPTIONKEY: ${encryption_key}
+      COMMIT_ID: ${commit_id}
     external_links:
        - ${client_stack}:elasticsearch-client
     mem_limit: ${container_memory}

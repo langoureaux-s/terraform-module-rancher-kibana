@@ -25,7 +25,7 @@ data "template_file" "docker_compose_kibana" {
     label_scheduling        = "${var.label_scheduling}"
     global_scheduling       = "${var.global_scheduling}"
     kb_version              = "${var.image_version}"
-    mem_limit               = "${var.container_memory != "" ? "mem_limit:" var.container_memory : ""}"
+    mem_limit               = "${var.container_memory != "" ? "mem_limit: ${var.container_memory}" : ""}"
     cpu_shares              = "${var.cpu_shares}"
     encryption_key          = "${var.encryption_key}"
     client_stack            = "${var.client_stack}"

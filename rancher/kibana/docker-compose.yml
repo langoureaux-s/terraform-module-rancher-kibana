@@ -7,7 +7,8 @@ services:
       KB_CONFIG_ELASTICSEARCH_URL: http://elasticsearch-client:9200
       KB_CONFIG_ELASTICSEARCH_USERNAME: kibana
       KB_CONFIG_ELASTICSEARCH_PASSWORD: ${kibana_password}
-      KB_CONFIG_DEFAULTAPPID: dashboard
+      KB_CONFIG_DEFAULTAPPID: ${default_app_id}
+      KB_CONFIG_DEFAULTROUTE: ${default_route}
       KB_MONITORING_UIENABLED: ${monitoring_ui}
       KB_CONFIG_ELASTICSEARCH_REQUESTTIMEOUT: 300000
       KB_CONFIG_ENCRYPTIONKEY: ${encryption_key}

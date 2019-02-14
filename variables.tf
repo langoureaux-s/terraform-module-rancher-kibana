@@ -15,7 +15,7 @@ variable "commit_id" {
 
 variable "image_version" {
   description = "The image version of Kibana to use"
-  default = "6.5.4-1"
+  default = "6.5.4-2"
 }
 variable "kibana_password" {
   description = "The kibana password"
@@ -50,6 +50,15 @@ variable "container_memory" {
 variable "cpu_shares" {
   description = "The maximum of CPU usage that Elasticsearch container can consume"
   default = "1024"
+}
+
+variable "default_app_id" {
+  description = "The default page when connect on Kibana"
+  default = "dashboards"
+}
+variable "default_route" {
+  description = "The default route on kibana"
+  default = ""
 }
 
 

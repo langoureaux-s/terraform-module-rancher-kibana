@@ -30,6 +30,8 @@ data "template_file" "docker_compose_kibana" {
     encryption_key          = "${var.encryption_key}"
     client_stack            = "${var.client_stack}"
     commit_id               = "${var.commit_id}"
+    default_app_id          = "${var.default_app_id}"
+    default_route           = "${var.default_route}"
   }
 }
 data "template_file" "rancher_compose_kibana" {

@@ -32,6 +32,7 @@ data "template_file" "docker_compose_kibana" {
     commit_id               = "${var.commit_id}"
     default_app_id          = "${var.default_app_id}"
     default_route           = "${var.default_route}"
+    default_base_path       = "${var.default_base_path}"
   }
 }
 data "template_file" "rancher_compose_kibana" {

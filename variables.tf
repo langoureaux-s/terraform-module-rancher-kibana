@@ -15,7 +15,7 @@ variable "commit_id" {
 
 variable "image_version" {
   description = "The image version of Kibana to use"
-  default = "6.5.4-2"
+  default = "6.5.4-4"
 }
 variable "kibana_password" {
   description = "The kibana password"
@@ -58,6 +58,10 @@ variable "default_app_id" {
 }
 variable "default_route" {
   description = "The default route on kibana"
+  default = ""
+}
+variable "default_base_path" {
+  description = "The default base path needed for reverse proxy in kind use case"
   default = ""
 }
 

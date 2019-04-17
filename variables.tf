@@ -15,7 +15,7 @@ variable "commit_id" {
 
 variable "image_version" {
   description = "The image version of Kibana to use"
-  default = "6.5.4-4"
+  default = "6.5.4-5"
 }
 variable "kibana_password" {
   description = "The kibana password"
@@ -24,7 +24,11 @@ variable "encryption_key" {
   description = "The encryption key needed when multiple kibana instance"
 }
 variable "monitoring_ui" {
-  description = "Permit to enable/disable the monitoring"
+  description = "Permit to enable/disable the monitoring UI"
+}
+variable "monitoring_enabled" {
+  description = "Permit to enable/disable the monitoring data collection"
+  default = "true"
 }
 variable "scale" {
   description = "Set the number of instance you should.Don't use it if you should global_scheduling as true"

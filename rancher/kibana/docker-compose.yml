@@ -10,7 +10,7 @@ services:
       KB_CONFIG_DEFAULTAPPID: ${default_app_id}
       KB_CONFIG_DEFAULTROUTE: ${default_route}
       KB_CONFIG_BASEPATH: ${default_base_path}
-      KB_MONITORING_ENABLED: ${monitoring_enabled}
+      KB_MONITORING_ENABLED: ${enable_monitoring}
       KB_MONITORING_UIENABLED: ${monitoring_ui}
       KB_CONFIG_ELASTICSEARCH_REQUESTTIMEOUT: 300000
       KB_CONFIG_ENCRYPTIONKEY: ${encryption_key}

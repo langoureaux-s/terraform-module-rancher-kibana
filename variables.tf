@@ -26,7 +26,7 @@ variable "encryption_key" {
 variable "monitoring_ui" {
   description = "Permit to enable/disable the monitoring UI"
 }
-variable "monitoring_enabled" {
+variable "enable_monitoring" {
   description = "Permit to enable/disable the monitoring data collection"
   default = "true"
 }

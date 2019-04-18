@@ -28,7 +28,7 @@ variable "monitoring_ui" {
 }
 variable "enable_monitoring" {
   description = "Permit to enable/disable the monitoring data collection"
-  default = "true"
+  default = ""
 }
 variable "scale" {
   description = "Set the number of instance you should.Don't use it if you should global_scheduling as true"

@@ -12,4 +12,4 @@ services:
       strategy: recreate
       initializing_timeout: 120000
       reinitializing_timeout: 120000
-      request_line: GET /api/status HTTP/1.1
+      request_line: GET ${healtcheck_url} HTTP/1.1

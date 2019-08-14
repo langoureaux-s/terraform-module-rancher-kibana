@@ -34,13 +34,15 @@ data "template_file" "docker_compose_kibana" {
     default_app_id          = "${var.default_app_id}"
     default_route           = "${var.default_route}"
     default_base_path       = "${var.default_base_path}"
+    healtcheck_url          = "${var.default_base_path == "" ? "/api/status" : "${var.default_base_path}/api/status"}"
   }
 }
 data "template_file" "rancher_compose_kibana" {
   template = "${file("${path.module}/rancher/kibana/rancher-compose.yml")}"
 
   vars {
-     scale  = "${var.scale != "" ? "scale: ${var.scale}" : ""}"
+     scale          = "${var.scale != "" ? "scale: ${var.scale}" : ""}"
+     healtcheck_url = "${local.healtcheck_url}"
   }
 }
 resource "rancher_stack" "this" {

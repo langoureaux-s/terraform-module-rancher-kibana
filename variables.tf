@@ -69,7 +69,15 @@ variable "default_base_path" {
   default = ""
 }
 
+variable "autocomplete_timeout" {
+  description = "Time in milliseconds to wait for autocomplete suggestions from Elasticsearch"
+  default = ""
+}
 
+variable "autocomplete_terminated_after" {
+  description = "Maximum number of documents loaded by each shard to generate autocomplete suggestions"
+  default = ""
+}
 
 
 

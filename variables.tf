@@ -15,7 +15,7 @@ variable "commit_id" {
 
 variable "image_version" {
   description = "The image version of Kibana to use"
-  default = "6.8.2-1"
+  default = "7.5.1-1"
 }
 variable "kibana_password" {
   description = "The kibana password"
